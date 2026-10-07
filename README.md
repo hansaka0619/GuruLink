@@ -4,151 +4,134 @@
 
 **GuruLink** is a web-based education platform designed to connect students with teachers and provide a centralized environment for managing learning activities.
 
-The platform allows students to discover teachers, enroll in their courses, access learning materials, complete quizzes and assignments, and monitor their academic progress. Teachers can create and manage their courses, provide educational resources, create assessments, manage enrolled students, and monitor student performance.
+The platform is being developed to allow students to discover teachers, enroll in courses, access learning materials, participate in quizzes and assignments, attend online classes, and monitor their academic progress.
 
-This repository currently contains the development of the **GuruLink website demo**.
+Teachers will be able to manage their courses, upload learning materials, create quizzes and assignments, conduct online classes, manage enrolled students, and monitor student performance.
+
+This repository contains the ongoing development of the **GuruLink website demo**.
+
+---
 
 ## Target Users
 
 ### Students
+
 Students will be able to:
+
 - Find teachers based on subjects and grades
 - View teacher profiles
 - Enroll in available courses
 - Access learning materials
 - Complete quizzes
 - Submit assignments
+- Attend online classes
 - View marks and feedback
 - Track their learning progress
 
 ### Teachers
+
 Teachers will be able to:
-- Create a teacher profile
-- Specify the grades and subjects they teach
-- Manage their courses
-- Upload lecture and learning materials
-- Create quizzes and assignments
-- View enrolled students
-- Grade student work and provide feedback
-- Monitor individual student performance and progress
 
-## Main Website Sections
+- Create and manage courses
+- Specify the subjects and grades they teach
+- Manage enrolled students
+- Upload learning materials
+- Create quizzes
+- Create assignments
+- Conduct online classes
+- View quiz and assignment completion
+- Monitor individual student performance
+- Track overall student progress
 
-The GuruLink platform will include:
+---
 
-- Home
-- About Us
-- Teachers
-- Teacher Profiles
-- Students
-- Contact
-- Login
-- Registration
-- Student Dashboard
-- Teacher Dashboard
+## Development Progress
 
-## Student Dashboard
+GuruLink is currently under active development.
 
-The student dashboard will provide students with access to their enrolled courses, teachers, learning materials, quizzes, assignments, marks, and progress information.
+### Public Website
 
-## Teacher Dashboard
+| Page | Status |
+|---|---|
+| Home | Planned |
+| About Us | ✅ Implemented |
+| Teachers | Planned |
+| Students | ✅ Implemented |
+| Contact | ✅ Implemented |
+| Login | Planned |
+| Register | Planned |
 
-The teacher dashboard will allow teachers to manage courses and learning materials, create quizzes and assignments, manage enrolled students, review submissions, and monitor student performance.
+### Student Dashboard
 
-## Project Goal
+🚧 Planned / Not yet implemented
 
-The goal of GuruLink is to provide a simple and organized digital environment where teachers can manage their educational activities and students can easily access learning resources and monitor their academic progress.
+### Teacher Dashboard
 
-## Demo Development Status
+🚧 Planned / Not yet implemented
 
-🚧 **Currently in Development**
+---
 
-### Development Progress
+## Recently Added
 
-- [x] Initial project planning
-- [x] Feature and requirement identification
-- [x] Project setup
-- [x] Public website development
-- [ ] Student dashboard development
-- [ ] Teacher dashboard development
-- [ ] Authentication and registration
-- [x] Responsive design
-- [x] Testing
-- [ ] Final demo
+### About Us Page
 
-## UI Design Direction
+Implemented the public About Us page to introduce GuruLink and provide information about the purpose of the platform.
 
-The GuruLink website will follow a clean, modern, and simple design using the supplied **purple, white, lavender and coral reference design**. The interface will focus on usability and avoid unnecessary content or overly complex visual elements.
+### Students Page
 
-The website will also be responsive so that it can be used across desktop, tablet, and mobile devices.
+Implemented the public Students page to present the learning features and services available to students through GuruLink.
 
-## Current Version
+### Contact Page
 
-**Version:** Phase 1 Frontend  
-**Status:** Phase 1 ready for review
+Implemented the public Contact page to provide contact information and allow users to communicate with the GuruLink platform.
 
-## Phase 1 frontend
+---
 
-The seven public routes are implemented using Next.js App Router, React, TypeScript, Tailwind CSS v4 and Lucide icons:
+## Planned Main Features
 
-| Route | Page |
-| --- | --- |
-| `/` | Home |
-| `/about` | About Us |
-| `/teachers` | Searchable teacher directory and mock profile previews |
-| `/students` | Student learning features |
-| `/contact` | Contact form and FAQ accordions |
-| `/login` | Login layout |
-| `/register` | Student and Teacher registration forms |
+- Teacher discovery and filtering
+- Student enrollment
+- Learning material management
+- Quizzes and assessments
+- Assignment submission and grading
+- Student progress tracking
+- Teacher performance monitoring tools
+- Online live classes
+- Student and teacher dashboards
 
-### Run locally
+---
 
-Requires Node.js 20.9 or newer.
+## Technology Stack
 
-```sh
-npm install
-npm run dev
-```
+### Frontend
 
-Open http://localhost:3000. On Windows PowerShell, use `npm.cmd` if the execution policy blocks `npm.ps1`.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-### Validation
+### Backend
 
-```sh
-npm run lint
-npm run typecheck
-npm run build
-npm start
-```
+- Node.js
+- Express.js
+- TypeScript
 
-Browser checks run against the running app:
+### Database
 
-```sh
-npm run test:ui
-```
+- MongoDB
 
-Browser checks use installed Google Chrome by default. Set `PLAYWRIGHT_CHANNEL` to `msedge` to use Edge, or install Playwright Chromium and set it to `chromium`. `BASE_URL` can point the browser checks at a different host. Screenshots are saved under `test-results/screenshots/` for desktop, tablet and mobile. Tests cover routes, image loading, horizontal overflow, navigation, search/filtering, profile dialogs, FAQ, contact forms, login controls and both registration forms.
+---
 
-### Structure and design
+## Current Project Structure
 
-- `src/app/`: routes and global reference-matched styles; `(public)` shares the header and footer.
-- `src/components/`: reusable UI, forms and interactive components.
-- `src/lib/data.ts`: six realistic mock teacher profiles.
-- `public/design/`: original reference sheets, preserved unchanged.
-- `public/images/`: extracted reference illustrations, teacher portraits and icons.
-
-The main UI reference controls composition and colors; the asset reference supplies the actual illustrations and portraits. Desktop uses the supplied grid layouts; tablet and mobile stack content and provide a collapsible navigation menu. Photos are supplied mock portraits, not verified real teachers.
-
-This phase is frontend only. Forms validate locally and display preview feedback. No form data is transmitted or persisted, no accounts are created, and there are no APIs, databases, authentication services or dashboards. Support policies and social icons are placeholders until launch.
-
-### Verified Phase 1 results
-
-- ESLint: passed without warnings or errors.
-- TypeScript: passed.
-- Production build: passed; all seven routes prerender successfully.
-- Browser validation: all seven pages at 1440px, 768px and 390px; images loaded and no horizontal overflow.
-- Interactive checks: desktop and mobile navigation, combined teacher filters, empty results, profile dialog, FAQ accordion, contact feedback, password visibility, login preview controls, password confirmation, Student registration and Teacher registration.
-- No browser JavaScript errors. Twenty-two screenshots are available in `test-results/screenshots/` (ignored by Git).
-- Reference images were reviewed before implementation and desktop/mobile captures inspected after refinement.
-
-The extracted assets retain the supplied sheet's resolution; original standalone assets can replace these files for sharper large-screen imagery. The dependency audit reports five development-tool advisories through the ESLint `braces` dependency chain, with no runtime package advisories reported; the suggested automatic fix downgrades the Next.js lint configuration across major versions, so it was not applied.
+```text
+src/
+└── app/
+    └── (public)/
+        ├── about/
+        │   └── page.tsx
+        ├── contact/
+        │   └── page.tsx
+        ├── students/
+        │   └── page.tsx
+        └── README.md
