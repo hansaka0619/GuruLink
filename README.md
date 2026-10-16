@@ -1,238 +1,130 @@
-# GuruLink
+GuruLink
+Project Overview
+GuruLink is a web-based education platform being developed to connect students with teachers and provide a central place for learning activities.
+Students will be able to discover teachers, enroll in courses, access learning materials, complete quizzes and assignments, join live online classes, and monitor their progress. Teachers will be able to manage courses and enrolled students, publish learning resources and assessments, conduct live classes, and review student performance.
+This repository contains the ongoing development of the GuruLink website demo. The current work focuses on the frontend; the features described below are not all functional yet.
+Target Users
+Students
+Planned capabilities include:
+- Find teachers by subject and grade and view their profiles
+- Enroll in courses and access learning materials
+- Take quizzes, submit assignments, and view marks and feedback
+- Join live online classes
+- Track progress for each enrolled course
+Teachers
+Planned capabilities include:
+- Specify teaching subjects and grades
+- Create and manage courses and enrolled students
+- Upload learning materials and publish quizzes and assignments
+- Review submissions, marks, and quiz performance
+- Schedule and conduct live online classes
+- Monitor individual and overall student progress
+Development Progress
+GuruLink is organized into three main phases.
+Phase 1 — Public Website
+The initial frontend pages have been created:
+Page	Status
+Home	Frontend implemented
+About Us	Frontend implemented
+Teachers	Frontend implemented
+Students	Frontend implemented
+Contact	Frontend implemented
+Login	Frontend implemented (UI only)
+Register	Frontend implemented (UI only)
 
-## Project Overview
 
-**GuruLink** is a web-based education platform designed to connect students with teachers and provide a centralized environment for managing learning activities.
-
-The platform is being developed to allow students to discover teachers, enroll in courses, access learning materials, participate in quizzes and assignments, attend online classes, and monitor their academic progress.
-
-Teachers will be able to manage their courses, upload learning materials, create quizzes and assignments, conduct online classes, manage enrolled students, and monitor student performance.
-
-This repository contains the ongoing development of the **GuruLink website demo**.
-
----
-
-## Target Users
-
-### Students
-
-Students will be able to:
-
-- Find teachers based on subjects and grades
-- View teacher profiles
-- Enroll in available courses
-- Access learning materials
-- Complete quizzes
-- Submit assignments
-- Attend online classes
-- View marks and feedback
-- Track their learning progress
-
-### Teachers
-
-Teachers will be able to:
-
-- Create and manage courses
-- Specify the subjects and grades they teach
-- Manage enrolled students
-- Upload learning materials
-- Create quizzes
-- Create assignments
-- Conduct online classes
-- View quiz and assignment completion
-- Monitor individual student performance
-- Track overall student progress
-
----
-
-## Development Progress
-
-GuruLink is currently under active development.
-
-The development process is divided into three main phases.
-
-### Phase 1 — Public Website
-
-| Page | Status |
-|---|---|
-| Home | ✅ Frontend Implemented |
-| About Us | ✅ Frontend Implemented |
-| Teachers | ✅ Frontend Implemented |
-| Students | ✅ Frontend Implemented |
-| Contact | ✅ Frontend Implemented |
-| Login | ✅ Frontend Implemented |
-| Register | ✅ Frontend Implemented |
-
-**Status:** Initial public website pages implemented. Further UI improvements, testing, and backend integration are pending.
-
-### Phase 2 — Student Dashboard
-
-🚧 Planned / Not yet implemented
-
-Planned features:
-
-- Student dashboard overview
-- Teacher discovery and enrollment
-- Enrolled courses
-- Learning materials
-- Quizzes and results
-- Assignment submissions
-- Live online classes
-- Academic progress tracking
-
-### Phase 3 — Teacher Dashboard
-
-🚧 Planned / Not yet implemented
-
-Planned features:
-
-- Teacher dashboard overview
-- Course management
-- Enrolled student management
-- Learning material uploads
-- Quiz creation and evaluation
-- Assignment creation and grading
-- Live class scheduling and conducting
-- Student performance analytics
-
----
-
-## Recently Added
-
-### Home Page
-
-Implemented the public Home page as the main entry point to the GuruLink platform.
-
-### About Us Page
-
-Implemented the About Us page to introduce GuruLink and explain the purpose of the platform.
-
-### Teachers Page
-
-Implemented the public Teachers page to present available teachers and support teacher discovery through the frontend interface.
-
-### Students Page
-
-Implemented the public Students page to present the learning features and services available to students.
-
-### Contact Page
-
-Implemented the Contact page with contact information and a user-facing contact interface.
-
-### Login Page
-
-Implemented the frontend Login page with the necessary user interface for account access.
-
-### Registration Page
-
-Implemented the frontend Registration page for students and teachers.
-
-### Application Layout and Styling
-
-Added the public website layout, application layout, global styling, and a custom not-found page.
-
-Authentication, form processing, and other backend functionality will be integrated in later development stages.
-
----
-
-## Planned Main Features
-
-- Teacher discovery and filtering
-- Student enrollment
-- Student and teacher authentication
-- Course management
-- Learning material management
-- Quizzes and assessments
-- Assignment submission and grading
-- Student progress tracking
-- Teacher performance monitoring
-- Online live classes
-- Student and teacher dashboards
-
----
-
-## Technology Stack
-
-### Frontend
-
+Current status: The first version of the public website is in place. Visual refinements, responsive checks, functional testing, authentication, and backend integration remain to be completed or verified.
+Phase 2 — Student Dashboard
+Status: Planned — not yet implemented.
+Planned areas: dashboard overview, teacher discovery and enrollment, enrolled courses, materials, quizzes, assignments, live classes, and progress tracking.
+Phase 3 — Teacher Dashboard
+Status: Planned — not yet implemented.
+Planned areas: dashboard overview, course and student management, material uploads, quizzes, assignments, live class scheduling, and performance analytics.
+Recent Development Work
+Public Pages and Layouts
+- Created the Home, About Us, Teachers, Students, and Contact page interfaces
+- Created the Login and Register page interfaces
+- Added shared application/public layouts, global styling, and a custom not-found page
+Reusable Frontend Components
+Added reusable components under src/components/:
+- auth-shell.tsx
+- contact-content.tsx
+- footer.tsx
+- header.tsx
+- login-form.tsx
+- password-field.tsx
+- register-form.tsx
+- teacher-card.tsx
+- teacher-directory.tsx
+- ui.tsx
+Data and Configuration
+- Added src/lib/data.ts for frontend data
+- Added Next.js, TypeScript, ESLint, PostCSS, and dependency configuration files
+- Added .gitignore for Git exclusions
+Initial Tests
+- Added tests/phase1.mjs as an initial frontend test file
+- Test execution and results have not yet been confirmed in this README
+Technology Stack
+Frontend
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
-
-### Planned Backend
-
+Planned backend
 - Node.js
 - Express.js
 - TypeScript
-
-### Planned Database
-
+Planned database
 - MongoDB
-
----
-
-## Current Project Structure
-
-```text
+Current Project Structure
 GuruLink/
 ├── public/
 ├── src/
 │   ├── app/
 │   │   ├── (public)/
-│   │   │   ├── about/
-│   │   │   │   └── page.tsx
-│   │   │   ├── contact/
-│   │   │   │   └── page.tsx
-│   │   │   ├── students/
-│   │   │   │   └── page.tsx
-│   │   │   ├── teachers/
-│   │   │   │   └── page.tsx
+│   │   │   ├── about/page.tsx
+│   │   │   ├── contact/page.tsx
+│   │   │   ├── students/page.tsx
+│   │   │   ├── teachers/page.tsx
 │   │   │   ├── layout.tsx
 │   │   │   └── page.tsx
-│   │   ├── login/
-│   │   │   └── page.tsx
-│   │   ├── register/
-│   │   │   └── page.tsx
+│   │   ├── login/page.tsx
+│   │   ├── register/page.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── not-found.tsx
 │   ├── components/
-│   └── lib/
-│       └── data.ts
+│   │   ├── auth-shell.tsx
+│   │   ├── contact-content.tsx
+│   │   ├── footer.tsx
+│   │   ├── header.tsx
+│   │   ├── login-form.tsx
+│   │   ├── password-field.tsx
+│   │   ├── register-form.tsx
+│   │   ├── teacher-card.tsx
+│   │   ├── teacher-directory.tsx
+│   │   └── ui.tsx
+│   └── lib/data.ts
+├── tests/phase1.mjs
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
 ├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── tsconfig.json
 └── README.md
-```
-
----
-
-## Development Approach
-
-GuruLink is being developed incrementally, with individual pages and related components implemented and committed progressively.
-
-The project follows three main development phases:
-
-1. **Public Website:** Design and implement the public-facing pages, navigation, and authentication interfaces.
-2. **Student Dashboard:** Develop student-facing course enrollment, learning activities, live classes, and progress tracking.
-3. **Teacher Dashboard:** Develop teacher-facing course management, learning resources, assessments, live classes, and analytics.
-
-Backend development, database integration, testing, and deployment will follow as the platform progresses.
-
----
-
-## Current Project Status
-
-**Current Stage:** Frontend Development — Phase 1
-
-The initial frontend pages for Phase 1 have been created.
-
-**Next Steps:**
-
-- Review and refine the public website UI
-- Commit remaining shared components and project configuration files
-- Verify navigation and responsive layouts
-- Begin developing the student dashboard
-- Continue with the teacher dashboard
-- Implement backend services and database integration
-
-**GuruLink is currently a work in progress.**
+Development Approach
+GuruLink is being built incrementally, with pages and related components added in separate Git commits. The planned order is:
+1. Public Website: Build the public pages, shared navigation, and authentication interfaces.
+2. Student Dashboard: Build student-facing learning and progress interfaces.
+3. Teacher Dashboard: Build teacher-facing course management and analytics interfaces.
+Backend services, database integration, functional testing, and deployment will be carried out as development progresses.
+Next Steps
+- Review and refine Phase 1 styling and responsiveness
+- Verify navigation, forms, and frontend tests
+- Run a production build and fix any issues
+- Begin Phase 2: Student Dashboard
+- Continue with Phase 3: Teacher Dashboard
+- Integrate authentication, backend APIs, and MongoDB
+Project status: Work in progress. The current public pages are frontend implementations; full platform functionality is planned for later stages.
